@@ -1,5 +1,5 @@
 import { Divider } from './_shared.jsx';
 
 export default function Component07DivisorDeSeccion() {
-  return <Divider id="27:654" name="07 · Divisor de sección" word="Lenguaje Visual" big menu={['4073:613', '4073:614']} />;
+  return <Divider id="27:654" name="07 · Divisor de sección" word="Lenguaje Visual" big />;
 }

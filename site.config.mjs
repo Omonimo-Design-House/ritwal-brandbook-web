@@ -45,26 +45,14 @@ export default {
     '4045:593': '4044:375', // Contenido digital
     '4045:588': '4045:420', // Pauta
     '4045:583': '4045:516', // Impresos
-    // "Volver al índice" pills
-    '4073:598': '2:12',
-    '4073:601': '2:12',
-    '4073:604': '2:12',
-    '4073:607': '2:12',
-    '4073:610': '2:12',
-    '4073:613': '2:12',
-    '4073:616': '2:12',
-    '4073:619': '2:12',
-    '4073:622': '2:12',
-    '4073:625': '2:12',
-    '4073:628': '2:12',
   },
   navFallback: {},
   links: {},
 
   // Nodes with Figma's GLASS effect (CSS approximation is applied to them).
-  glassNodes: ['41:453', '4073:598', '41:457', '13:287', '4073:601', '4073:604', '4073:607', '41:469',
-    '4073:610', '4073:613', '4073:616', '4073:619', '4073:622', '4084:646', '4084:649', '4084:651',
-    '4084:653', '4073:625', '4073:628', '41:477'],
+  glassNodes: ['41:453', '41:457', '13:287', '41:469',
+    '4084:646', '4084:649', '4084:651',
+    '4084:653', '41:477'],
 
   // Elements fixed on screen while scrolling (Figma "fixed" children of the root frame).
   // mix-blend-difference does not blend inside the fixed wrapper, so the text uses the solid colour Figma shows.

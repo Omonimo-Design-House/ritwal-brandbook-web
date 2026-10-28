@@ -58,17 +58,6 @@ export function Pill({ id, linkId, left, top, h, href, color = ECO, children }) 
   );
 }
 
-// Round "MENÚ" button (top right) that scrolls back to the index (nav in site.config).
-export function MenuBtn({ id, textId, left = 1765, top = 110 }) {
-  return (
-    <button className="absolute content-stretch cursor-pointer drop-shadow-[0px_0px_3.9px_rgba(0,0,0,0.25)] flex items-center justify-center px-[22px] py-[10px] rounded-[47px] size-[80px]" style={{ left, top }} data-node-id={id} data-name="Volver al índice">
-      <div className="[word-break:break-word] font-['Google_Sans_Flex:Bold'] font-bold leading-[0] not-italic relative shrink-0 text-[#0c0c0c] text-[13px] text-left tracking-[1.95px] whitespace-nowrap" data-node-id={textId} style={fv}>
-        <p className="leading-[1.202]">MENÚ</p>
-      </div>
-    </button>
-  );
-}
-
 // Two-line meta used on chapter openers (absolute <p>s instead of a flex column).
 export function OpenerMeta({ color = ECO, dim = ECO45 }) {
   return (
@@ -130,14 +119,14 @@ export function CardLabel({ color = ECO, children }) {
   );
 }
 
-// Opener page for a chapter: meta, giant word, top rules, MENÚ button and optional download pill.
-export function Opener({ id, name, word, menu, pill }) {
+// Opener page for a chapter: meta, giant word, top rules and optional download pill.
+// The MENÚ button is only the floating one (site.config > floating); per-chapter copies duplicated it.
+export function Opener({ id, name, word, pill }) {
   return (
     <div className="bg-[#f7f1e8] relative size-full" data-node-id={id} data-name={name}>
       <OpenerMeta />
       <ChapterWord>{word}</ChapterWord>
       <TopRules />
-      {menu && <MenuBtn id={menu[0]} textId={menu[1]} />}
       {pill && <Pill {...pill}>descargar</Pill>}
     </div>
   );
@@ -262,9 +251,9 @@ export function PhotoRow({ id, srcs, top = 230, gap = 20, h = 420, left = 364, w
   );
 }
 
-// Chapter divider: meta, optional intro note at y=154, big word, top rules and MENÚ button.
+// Chapter divider: meta, optional intro note at y=154, big word and top rules.
 // `big` = the two-line variant (left 347, top 123) used by Lenguaje Visual / Fotografía / …
-export function Divider({ id, name, word, menu, intro, introRight, big }) {
+export function Divider({ id, name, word, intro, introRight, big }) {
   return (
     <div className="bg-[#f7f1e8] relative size-full" data-node-id={id} data-name={name}>
       {intro && (
@@ -275,7 +264,6 @@ export function Divider({ id, name, word, menu, intro, introRight, big }) {
       {big
         ? <p className="[word-break:break-word] absolute font-['Google_Sans_Flex:Thin'] font-thin h-[549px] leading-[275px] left-[347px] text-[#8b6f4b] text-[315px] top-[123px] tracking-[-12.6px] w-[1493px]" style={fv}>{word}</p>
         : <ChapterWord>{word}</ChapterWord>}
-      {menu && <MenuBtn id={menu[0]} textId={menu[1]} />}
     </div>
   );
 }

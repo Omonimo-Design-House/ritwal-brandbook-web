@@ -1,5 +1,5 @@
 import { Opener } from './_shared.jsx';
 
 export default function Component28Color() {
-  return <Opener id="19:2758" name="28 - Color" word="Color" menu={['4073:607', '4073:608']} />;
+  return <Opener id="19:2758" name="28 - Color" word="Color" />;
 }

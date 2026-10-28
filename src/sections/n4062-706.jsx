@@ -1,4 +1,4 @@
-import { fv, Img } from './_shared.jsx';
+import { fv } from './_shared.jsx';
 import { Page } from './_contenido.jsx';
 
 const a = (id) => `https://www.figma.com/api/mcp/asset/${id}.svg`;
@@ -60,10 +60,7 @@ export default function ContenidoCalendario() {
           </div>
         ))}
       </div>
-      <div className="absolute h-[148px] left-[1078px] top-[582px] w-[24.8px]" data-name="Guía">
-        <div className="absolute inset-[0_-3.02%_-0.51%_0]"><img alt="" className="block max-w-none size-full" src={a('0216e4fc-c267-4e47-869f-7de32820c8ac')} /></div>
-      </div>
-      <Img style={{ left: 1098.8, top: 578, width: 8, height: 8 }} src={a('73dbddb7-c4a3-40a3-bf6d-4b570e80b189')} />
+      {/* The guide line + dot from Thursday to the sheet (Figma 4062:852/853) were removed at the client's request. */}
       <p className="[word-break:break-word] absolute font-['Google_Sans_Flex:Light'] font-light leading-[normal] left-[365px] not-italic text-[#8b6f4b] text-[20px] top-[700px] w-[560px]" style={fv}>
         Cada semana mezcla formatos y temáticas, y deja la pauta para lo que lleva a reservar: el evento de la noche, el brunch del fin de semana.
       </p>
